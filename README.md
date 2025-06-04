@@ -2,6 +2,9 @@
 
 Codify is an interactive, memory-reinforcing coding platform that helps learners become fluent in programming by typing out code from memory, one block at a time. The platform uses OpenAI's GPT API to guide users through project-based notebooks, storing progress in Firebase and presenting the experience through a beautiful React.js interface.
 
+
+![Homepage Screenshot](./codelearning/public/Prev.png)
+
 ## ✨ Features
 
 - 🪄 **AI-Powered Code Walkthroughs**
