@@ -1,0 +1,75 @@
+.landing {
+    color: #f0f6fc;
+    background-color: #0d1117;
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .hero {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    color: #c9d1d9;
+  }
+
+  .cta-button {
+    margin-top: 2rem;
+    display: inline-block;
+    background-color: #58a6ff;
+    color: #0d1117;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .cta-button:hover {
+    background-color: #79b8ff;
+  }
+
+  .features {
+    text-align: center;
+  }
+
+  .features h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .feature-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .feature-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 280px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .feature-card h3 {
+    color: #58a6ff;
+    margin-bottom: 0.75rem;
+  }
+
+  .feature-card p {
+    color: #c9d1d9;
+    font-size: 0.95rem;
+  }

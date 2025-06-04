@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: 'Segoe UI', sans-serif;
+
+}
+h1 {
+  font-size: 1.6rem;
+}
+.app-container {
+  /* REMOVE display: flex */
+
+  background-color: #0d1117;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+.main-content {
+  margin-left: 230px; /* accommodate sidebar */
+  padding: 2rem;
+  background-color: #0d1117;
+  min-height: 100vh;
+  color: white;
+  overflow-y: hidden;
+}
+
+input, textarea {
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  color: #c9d1d9;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #58a6ff;
+}
+
+button {
+  background: linear-gradient(135deg, #163ec2, #0d5bb4);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+
+  border-radius: 8px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  gap: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #094196, #022a75);
+}
+
+h1, h2, h3 {
+  color: #f0f6fc;
+}
+
+a {
+  color: #58a6ff;
+  text-decoration: none;
+}

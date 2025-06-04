@@ -1,0 +1,76 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 230px;
+    z-index: 1;
+    background-color: #161b22;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 0.75rem 1.5rem;
+    width: calc(100% - 230px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #30363d;
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-logo-link {
+    display: inline-block;
+  }
+
+  .navbar-logo {
+    width: 84px;
+    height: 84px;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+    margin-left: 50px;
+  }
+
+  .navbar-logo:hover {
+    transform: scale(1.05);
+  }
+
+  .navbar-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #58a6ff;
+    transition: transform 0.2s ease;
+  }
+
+  .navbar-avatar:hover {
+    transform: scale(1.05);
+  }
+
+  .navbar-initial {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #58a6ff;
+    color: #0d1117;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: transform 0.2s ease;
+  }
+
+  .navbar-initial:hover {
+    transform: scale(1.05);
+  }

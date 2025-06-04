@@ -1,0 +1,356 @@
+/* Base container with animated background */
+.notebook-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 8vh;
+  min-height: 100vh;
+
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Animated background particles */
+.notebook-input-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+  animation: float 20s ease-in-out infinite;
+  z-index: -1;
+}
+
+/* Floating geometric shapes */
+.notebook-input-container::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(45deg, rgba(88, 166, 255, 0.1), rgba(59, 130, 246, 0.05));
+  border-radius: 50%;
+  top: 20%;
+  right: -100px;
+  animation: floatRight 15s ease-in-out infinite;
+  z-index: -1;
+}
+
+/* Main input card with glassmorphism */
+.notebook-input {
+  background: rgba(13, 17, 23, 0.85);
+  backdrop-filter: blur(20px);
+  padding: 3rem 2.5rem;
+  border: 1px solid rgba(48, 54, 61, 0.8);
+  border-radius: 20px;
+  max-width: 1000px;
+  width: 100%;
+  margin-top: -30px;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle gradient overlay */
+.notebook-input::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #58a6ff, #7c3aed, transparent);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.notebook-input:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(88, 166, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  border-color: rgba(88, 166, 255, 0.3);
+}
+
+/* Enhanced heading */
+.notebook-input h2 {
+  color: #f0f6fc;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid transparent;
+  background: linear-gradient(90deg, #30363d, #58a6ff, #30363d) bottom/100% 2px no-repeat;
+  padding-bottom: 1rem;
+  position: relative;
+  text-align: center;
+  letter-spacing: -0.025em;
+}
+
+/* Icon before heading */
+.notebook-input h2::before {
+  content: '🚀';
+  display: block;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+/* Enhanced textarea with better focus states */
+.notebook-input textarea,
+.goal-textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  background: rgba(13, 17, 23, 0.8);
+  border: 2px solid rgba(48, 54, 61, 0.6);
+  color: #e6edf3;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  line-height: 1.7;
+  resize: vertical;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.notebook-input textarea::placeholder,
+.goal-textarea::placeholder {
+  color: #7d8590;
+  font-style: italic;
+}
+
+.notebook-input textarea:focus,
+.goal-textarea:focus {
+  outline: none;
+  border-color: #58a6ff;
+  background: rgba(13, 17, 23, 0.95);
+  box-shadow:
+    0 0 0 3px rgba(88, 166, 255, 0.2),
+    inset 0 2px 4px rgba(0, 0, 0, 0.2),
+    0 4px 12px rgba(88, 166, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Enhanced CTA button */
+.notebook-input button,
+.startlearning {
+  margin-top: 2rem;
+  background: linear-gradient(135deg, #58a6ff 0%, #4d91df 50%, #58a6ff 100%);
+  color: #ffffff;
+  padding: 1.25rem 2.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 4px 15px rgba(13, 94, 216, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 200px;
+}
+
+/* Button shine effect */
+.notebook-input button::before,
+.startlearning::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.notebook-input button:hover,
+.startlearning:hover {
+  background: linear-gradient(135deg, #58a6ff 0%, #4d91df 50%, #58a6ff 100%);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.notebook-input button:hover::before,
+.startlearning:hover::before {
+  left: 100%;
+}
+
+.notebook-input button:active,
+.startlearning:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.notebook-input button:disabled {
+  background: linear-gradient(135deg, #4b5563, #6b7280);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* GPT Preview section */
+.gpt-preview {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: rgba(22, 27, 34, 0.8);
+  border: 1px solid rgba(48, 54, 61, 0.8);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.gpt-preview h3 {
+  color: #58a6ff;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.gpt-preview pre {
+  background: rgba(13, 17, 23, 0.9);
+  padding: 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(48, 54, 61, 0.5);
+  color: #e6edf3;
+  font-family: 'Fira Code', 'Monaco', monospace;
+  line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-20px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(10px) rotate(-1deg);
+  }
+}
+
+@keyframes floatRight {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-30px) translateX(-20px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .notebook-input-container {
+    padding-top: 4vh;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .notebook-input {
+    padding: 2rem 1.5rem;
+    margin-top: 0;
+  }
+
+  .notebook-input h2 {
+    font-size: 1.6rem;
+  }
+
+  .notebook-input textarea,
+  .goal-textarea {
+    min-height: 150px;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .notebook-input button,
+  .startlearning {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    min-width: 160px;
+  }
+}
+
+/* Loading state */
+.notebook-input button:disabled::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid transparent;
+  border-top: 2px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
