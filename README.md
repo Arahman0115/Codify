@@ -34,5 +34,4 @@ Codify is an interactive, memory-reinforcing coding platform that helps learners
 - Database: Firebase Firestore
 - Auth: Firebase Authentication
 
-## 📁 Project Structure
 
